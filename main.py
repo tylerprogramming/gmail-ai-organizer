@@ -8,6 +8,7 @@ from googleapiclient.discovery import build
 
 import helper.credentials as cred
 import helper.email_functions as ef
+from constants import constants
 
 
 def main() -> List[Dict[str, Any]]:
@@ -20,7 +21,7 @@ def main() -> List[Dict[str, Any]]:
     service = build('gmail', 'v1', credentials=creds)
 
     now = datetime.utcnow()
-    yesterday = (now - timedelta(days=5)).strftime('%Y/%m/%d')
+    yesterday = (now - timedelta(days=constants.days_back)).strftime('%Y/%m/%d')
 
     query = f'in:inbox after:{yesterday}'
 

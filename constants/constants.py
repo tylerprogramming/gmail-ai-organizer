@@ -8,3 +8,5 @@ list_of_labels = [
     "Events",
     "Hubspot"
 ]
+
+days_back = 10
