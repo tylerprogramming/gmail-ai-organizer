@@ -1,0 +1,8 @@
+# Dependencies for main.py (the Gmail labeler). The crew/ folder is an unused
+# CrewAI experiment and is not installed here.
+google-api-python-client>=2.100,<3  # googleapiclient.discovery.build
+google-auth>=2.20,<3                 # google.oauth2.credentials, google.auth.transport.requests
+google-auth-oauthlib>=1.0,<2         # InstalledAppFlow
+openai>=1.40,<4
+python-dotenv>=1.0,<2
+beautifulsoup4>=4.12,<5              # cleans HTML email bodies
