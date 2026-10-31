@@ -69,7 +69,8 @@ def check_labels(service, response_objects: List[Dict[str, Any]]):
                 apply_label(service, 'me', object.get('id'), label_id)
         else:
             completion = client.chat.completions.create(
-                model="gpt-4o-mini",
+                # gpt-4o-mini is deprecated (snapshot removed 2027-01-14); gpt-6-luna is OpenAI's replacement
+                model="gpt-6-luna",
                 messages=[
                     {
                         "role": "system",
